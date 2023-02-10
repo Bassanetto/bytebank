@@ -5,7 +5,7 @@ public class ContaCorrente
     public int Agencia;
     public string Conta;
     public Cliente Titular;
-    public double Saldo = 100;
+    private double Saldo = 100;
 
     public void Depositar(double valor)
     {
@@ -17,7 +17,9 @@ public class ContaCorrente
         {
             this.Saldo -= valor;
             return true;
-        }  else {
+        }  
+        else 
+        {
             return false;
         }
     }
@@ -34,5 +36,22 @@ public class ContaCorrente
             destino.Depositar(valor);
             return true;
         }
+    }
+
+    public void DefinirSaldo(double valor) 
+    {
+        if (valor < 0)
+        {
+            return; 
+        }
+        else 
+        {
+            this.Saldo += valor;
+        }
+    }
+
+    public double ObterSaldo() 
+    {
+        return this.Saldo;
     }
 }

@@ -17,29 +17,28 @@ ContaCorrente conta = new ContaCorrente();
 conta.Titular = cliente;
 conta.Conta = "1010-X";
 conta.Agencia = 15;
-conta.Saldo = 100;
+conta.DefinirSaldo(100);
 
 Console.WriteLine("Titular: " + conta.Titular.Nome);
 Console.WriteLine("CPF: " + conta.Titular.Cpf);
 Console.WriteLine("Profissão: " + conta.Titular.Profissao);
 Console.WriteLine("Agência: " + conta.Agencia);
 Console.WriteLine("Número Conta: " + conta.Conta);
-Console.WriteLine("Saldo: " + conta.Saldo);
+Console.WriteLine("Saldo: " + conta.ObterSaldo());
 
-ContaCorrente contaMaria = new ContaCorrente();
-contaMaria.Agencia = 20;
-contaMaria.Titular.Nome = "Maria Eduarda";
-contaMaria.Conta = "1010-5";
-contaMaria.Saldo = 350;
+ContaCorrente conta2 = new ContaCorrente();
 
-// Console.WriteLine("Saldo da conta da Maria = " + contaMaria.Saldo);
+conta2.Titular = new Cliente(); 
 
-// contaAndre.Transferir(50, contaMaria);
+conta2.Titular.Nome = "André Silva";
+conta2.Titular.Cpf = "123456789";
+conta2.Titular.Profissao = "Analista";
+conta2.Titular = cliente;
+conta2.Conta = "1010-X";
+conta2.Agencia = 15;
+conta2.DefinirSaldo(100);
 
-// System.Console.WriteLine("Saldo do André = " + contaAndre.Saldo);
-// System.Console.WriteLine("Saldo da Maria = " + contaMaria.Saldo);
-
-ContaCorrente contaPedro = new ContaCorrente();
-
-contaPedro.Titular.Nome = "Pedro Almeida";
+ContaCorrente conta3 = new ContaCorrente();
+conta3.DefinirSaldo(200);
+System.Console.WriteLine(conta3.ObterSaldo());
 
