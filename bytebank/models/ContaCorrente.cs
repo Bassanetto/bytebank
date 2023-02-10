@@ -1,11 +1,11 @@
-namespace bytebank;
+namespace bytebank.models;
 
 public class ContaCorrente
 {
     public int Agencia;
     public string Conta;
-    public string Titular;
-    public double Saldo;
+    public Cliente Titular;
+    public double Saldo = 100;
 
     public void Depositar(double valor)
     {
