@@ -33,7 +33,6 @@ conta2.Titular = new Cliente();
 conta2.Titular.Nome = "André Silva";
 conta2.Titular.Cpf = "123456789";
 conta2.Titular.Profissao = "Analista";
-conta2.Titular = cliente;
 conta2.Conta = "1010-X";
 conta2.Agencia = 15;
 conta2.DefinirSaldo(100);

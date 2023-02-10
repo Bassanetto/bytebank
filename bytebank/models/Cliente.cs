@@ -2,7 +2,7 @@ namespace bytebank.models;
 
 public class Cliente
 {
-    public string Nome;
-    public string Cpf;
-    public string Profissao;
+    public string Nome {get; set;}
+    public string Cpf {get; set;}
+    public string Profissao {get; set;}
 }

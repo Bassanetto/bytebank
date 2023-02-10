@@ -2,9 +2,9 @@ namespace bytebank.models;
 
 public class ContaCorrente
 {
-    public int Agencia;
-    public string Conta;
-    public Cliente Titular;
+    public int Agencia {get; set;} 
+    public string Conta {get; set;}
+    public Cliente Titular {get; set;}
     private double Saldo = 100;
 
     public void Depositar(double valor)
