@@ -11,4 +11,14 @@ public class ContaCorrente
     {
         this.Saldo += valor;
     }
+    public bool Saque(double valor)
+    {
+        if (valor <= this.Saldo)
+        {
+            this.Saldo -= valor;
+            return true;
+        }  else {
+            return false;
+        }
+    }
 }
