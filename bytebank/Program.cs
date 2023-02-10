@@ -8,14 +8,15 @@ contaAndre.Saldo = 100;
 
 Console.WriteLine("Saldo da conta do André = " + contaAndre.Saldo);
 
-contaAndre.Deposito(100);
+ContaCorrente contaMaria = new ContaCorrente();
+contaMaria.Agencia = 20;
+contaMaria.Titular = "Maria Eduarda";
+contaMaria.Conta = "1010-5";
+contaMaria.Saldo = 350;
 
-Console.WriteLine("Saldo da conta do André pós deposito = " + contaAndre.Saldo);
+Console.WriteLine("Saldo da conta da Maria = " + contaMaria.Saldo);
 
-if(contaAndre.Saque(100) == true) {
-    Console.WriteLine("Saldo da conta do André pós saque = " + contaAndre.Saldo);
-} else {
-    Console.WriteLine("Não foi possível efeturar o saque.");
-}
+contaAndre.Transferir(50, contaMaria);
 
-
+System.Console.WriteLine("Saldo do André = " + contaAndre.Saldo);
+System.Console.WriteLine("Saldo da Maria = " + contaMaria.Saldo);
